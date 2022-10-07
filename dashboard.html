@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>micro bank-figma</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="css/dashboard_style.css" />
+    <link rel="stylesheet" href="css/dashboard_mobile.css" />
+    <link rel="shortcut icon" href="#" />
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <!-- <link rel="stylesheet" href="css/tablet_dashboard.css" /> -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <script src="dashborad.js " defer></script>
+
+    <script>
+      function preventBack() {
+        window.history.forward();
+      }
+
+      setTimeout("preventBack()", 0);
+
+      window.onunload = function () {
+        null;
+      };
+    </script>
+    <link rel="stylesheet" href="css/dashboard_style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-left">
+        <img
+          class="dashboard-microbank-icon"
+          src="src/Micro Bank_dashboard.png"
+        />
+        <div class="vertical-divider"></div>
+        <div class="company-name">ABC Pvt. Ltd.</div>
+      </div>
+
+      <div class="header-right">
+        <img class="bell-icon" src="src/notification.png" alt="" />
+
+        <a class="profile-circle"  href="javascript:togglemenu()" style="text-decoration: none;">AT</a>
+        <img
+          class="dropdown-icon"
+         
+          src="src/drop_dwon.png"
+          alt=""
+        />
+       
+        </div>
+      </nav>
+      </div>
+
+      <div class="sub-menu-page" id="submenu">
+           
+          
+           
+           <div class="person-name"><span class="pname">AT</span></div>
+             <span class="person-name1">Aarti Tak</span>
+            <a class="email-id">aarti.tak@perennialsys.com</a>
+
+            <a
+              href="Edit_profile.html"
+              class="sub-menu-link"
+              id="sub-menu-link"
+              style="text-decoration: none;" 
+            >
+              <p  id="edit-profile-link">Edit profile</p>
+            </a>
+            <div
+              class="border-profile"
+              style="border-top: 1px solid #e0e0e0"
+            ></div>
+
+            <a style="text-decoration: none;"  href="#" class="sub-menu-link" id="sub-menu-link">
+              <p id="setting-link">Settings</p>
+            </a>
+            <div
+              class="border-profile"
+              style="border-top: 1px solid #e0e0e0"
+            ></div>
+
+            <a class="sub-menu-link" id="sub-menu-link1">
+              <p id="logout-link">LogOut</p>
+            </a>
+            <div
+              class="border-profile"
+              style="border-top: 1px solid #e0e0e0"
+            ></div>
+          </div>
+      
+    
+    <div class="dashboard-container">
+      <div class="dashboard">Dashboard</div>
+        
+      
+        <div class="navigation-bar">
+          <a id="previousPage"
+          class="summary" href="javascript:getprevious();" >Summary</a>
+       <a id="nextPage" class="summary" href="javascript:getnext();" >Details</a>
+       
+      </div>
+      <div id="summary-page">
+      <div class="account-details">
+        <div class="summary-title">Summary</div>
+        <div class="acc">
+          <div class="account-number">
+            <p class="acc-no">Account Number</p>
+            <p class="no">67238744</p>
+          </div>
+          <div class="income">
+            <p class="acc-no">Income</p>
+            <p class="no">$20,00,000</p>
+          </div>
+          <div class="spends">
+            <p class="acc-no">Spends</p>
+            <p class="no">$11,00,000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-container">
+        <div class="services-msg">Services</div>
+        <div class="services-provide">Micro bank services for you</div>
+      </div>
+
+
+       <div class="current-services-details">
+        <div class="current-summary-title">Current services</div>
+        <div class="acc">
+          <div class="account-number">
+          <img src="src/create_account.png">
+            <p class="no">Current Account</p>
+             <div class="rate" id="rate" >
+                  <span class="fa fa-star-o" id="account1" ></span>
+                
+                  <span class="fa fa-star-o"id="account2" ></span>
+                 
+                  <span class="fa fa-star-o" id="account3" ></span>
+                 
+                  <span class="fa fa-star-o" id="account4"  ></span>
+                
+                  <span  class="fa fa-star-o" id="account5" ></span>
+                
+                </div>
+          </div>
+          <div class="income" id="income">
+           <img src="src/payroll.png">
+            <p class="no">Payrolls</p>
+             <div class="rate">
+                   <span class="fa fa-star-o" id="income1"  ></span>
+                
+                  <span class="fa fa-star-o"id="income2" ></span>
+                 
+                  <span class="fa fa-star-o" id="income3" ></span>
+                 
+                  <span class="fa fa-star-o" id="income4" ></span>
+                
+                  <span  class="fa fa-star-o" id="income5"  ></span>
+               
+                </div>
+          </div>
+          <div class="spend" id="spendsss">
+            <img src="src/payment.png">
+            <p class="no">Payments</p>
+             <div class="rate">
+                   <span class="fa fa-star-o" id="spendsss1" name="rate" value="5" ></span>
+                
+                  <span class="fa fa-star-o"id="spendsss2" name="rate" value="4" ></span>
+                 
+                  <span class="fa fa-star-o" id="spendsss3" name="rate" value="3" ></span>
+                 
+                  <span class="fa fa-star-o" id="spendsss4" name="rate" value="2" ></span>
+                
+                  <span  class="fa fa-star-o" id="spendsss5" name="rate" value="1" ></span>
+                 
+                </div>
+          </div>
+        </div>
+      </div>
+
+
+
+             <div class="Available-services-details">
+        <div class="current-summary-title">Available services</div>
+        <div class="acc">
+          <div class="account-number">
+          <img src="src/wallets.png">
+            <p class="no">wallets</p>
+          </div>
+          <div class="income">
+           <img src="src/investments.png">
+            <p class="no">Investments</p>
+          </div>
+          <div class="spends">
+            <img src="src/tax_payments.png">
+            <p class="no">Tax Payments</p>
+          </div>
+          <div class="spends">
+            <img src="src/payment.png">
+            <p class="no">Loans</p>
+          </div>
+         
+
+
+        </div>
+      </div>
+      </div>
+      
+
+       <div id="details-container">
+        <table id="customers">
+  <tr>
+    <th>Transaction Id</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>2011002039111</td>
+    <td>22-09-2021</td>
+    <td>1,780</td>
+     <td style="color:green">Approved</td>
+       <td><img src="src/Transaction_eye.png">
+      <img class="download-icon"src="src/download_img.png"></td>
+  </tr>
+  <tr>
+    <td>2011002039111</td>
+    <td>22-09-2021</td>
+    <td>1,780</td>
+     <td style="color:green">Approved</td>
+      <td><img src="src/Transaction_eye.png">
+      <img class="download-icon" src="src/download_img.png"></td>
+  </tr>
+  <tr>
+    <td>2011002039111</td>
+    <td>22-09-2021</td>
+    <td>1,780</td>
+     <td style="color:red">Rejected</td>
+      <td><img src="src/Transaction_eye.png">
+      <img class="download-icon" src="src/download_img.png"></td>
+  </tr>
+  <tr>
+    <td>2011002039111</td>
+    <td>22-09-2021</td>
+    <td>1,780</td>
+     <td style="color:green">Approved</td>
+      <td><img src="src/Transaction_eye.png">
+      <img class="download-icon" src="src/download_img.png"></td>
+  </tr>
+  <tr>
+    <td>2011002039111</td>
+    <td>22-09-2021</td>
+    <td>1,780</td>
+     <td style="color:red">Rejected</td>
+      <td><img src="src/Transaction_eye.png">
+      <img class="download-icon" src="src/download_img.png"></td>
+  </tr>
+  
+   
+</table>
+            </div>
+      
+      <!-- <div class="current-services">
+         <div class="currentservice-title">Current Services</div>
+         <div class="service">
+        <div class="current-account">
+          <img src="src/create_account.png">
+        </div>
+         <div class="Payrolls">
+          <img src="src/payroll.png">
+         </div>
+          <div class="Payment">
+            <img src="src/payment.png">
+          </div>
+          </div>
+      </div> -->
+      <!-- </div>
+      </div> -->
+
+      <!-- <div class="comtainer">
+      <nav class="navbar">
+        <img
+          class="dashboard-microbank-icon"
+          src="src/Micro Bank_dashboard.png"
+        />
+        <div class="vertical-bar"></div>
+        - <img class="dashed" src="src/dashed.png" /> -->
+      <!-- <img class="dashboard-ABC-PVT-icon" src="src/ABC Pvt. Ltd..png" />
+        <img class="dashboard-notification-icon" src="src/notification.png" />
+
+        <div class="sub-menu-wrap">
+          <div class="sub-menu">
+            <div class="user-info">
+              <div class="user-profile">
+                <img class="profile-circle" src="src/profile_cirlce.png" />
+                <div id="profile-person-name">
+                  <a class="person-name" href="javascript:togglemenu();">AT</a>
+                </div>
+                <div class="dropdown">
+                  <img src="src/drop_dwon.png" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+      <!-- <div class="sub-menu-page" id="submenu">
+            <img class="profile-circle1" src="src/profile_cirlce.png" />
+            <span class="person-name1">Aarti Tak</span>
+            <a class="person-name2">AT</a>
+
+            <a class="email-id">aarti.tak@perennialsys.com</a>
+
+            <a
+              href="Edit_profile.html"
+              class="sub-menu-link"
+              id="sub-menu-link"
+            >
+              <p>Edit profile</p>
+            </a>
+            <div
+              class="border-profile"
+              style="border-top: 1px solid #e0e0e0"
+            ></div>
+
+            <a href="#" class="sub-menu-link" id="sub-menu-link">
+              <p>Settings</p>
+            </a>
+            <div
+              class="border-profile"
+              style="border-top: 1px solid #e0e0e0"
+            ></div>
+
+            <a class="sub-menu-link" id="sub-menu-link1">
+              <p id="logout-link">LogOut</p>
+            </a>
+            <div
+              class="border-profile"
+              style="border-top: 1px solid #e0e0e0"
+            ></div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="dashboard-container">
+        <span class="dashboard-name">Dashboard</span>
+
+        <div class="summary-details">
+          <a
+            href="javascript:getPereviousPage()"
+            id="previousPage"
+            class="summary"
+            >Summary</a
+          >
+          <a href="javascript:getNextPage()" id="nextPage" class="details"
+            >Details</a
+          >
+            <! <div id="details-container">
+            <div class="details-page">
+              <table id="customers">
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td class="transaction_data">2011002039111</td>
+                  <td class="transaction_data">22-09-2021</td>
+                  <td class="transaction_data">1,780</td>
+                  <td class="transaction_data transaction_data-color">
+                    Approved
+                  </td>
+                  <td>
+                    <img src="src/Transaction_eye.png" />
+                  </td>
+                  <td>
+                    <img src="src/download_img.png" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="transaction_data">2011002039111</td>
+                  <td class="transaction_data">22-09-2021</td>
+                  <td class="transaction_data">1,780</td>
+                  <td class="transaction_data transaction_data-color">
+                    Approved
+                  </td>
+                  <td>
+                    <img src="src/Transaction_eye.png" />
+                  </td>
+                  <td>
+                    <img src="src/download_img.png" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="transaction_data">2011002039111</td>
+                  <td class="transaction_data">22-09-2021</td>
+                  <td class="transaction_data">1,780</td>
+                  <td class="transaction_data transaction_data-color-red">
+                    Rejected
+                  </td>
+                  <td>
+                    <img src="src/Transaction_eye.png" />
+                  </td>
+                  <td>
+                    <img src="src/download_img.png" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="transaction_data">2011002039111</td>
+                  <td class="transaction_data">22-09-2021</td>
+                  <td class="transaction_data">1,780</td>
+                  <td class="transaction_data transaction_data-color">
+                    Approved
+                  </td>
+                  <td>
+                    <img src="src/Transaction_eye.png" />
+                  </td>
+                  <td>
+                    <img src="src/download_img.png" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="transaction_data">2011002039111</td>
+                  <td class="transaction_data">22-09-2021</td>
+                  <td class="transaction_data">1,780</td>
+                  <td class="transaction_data transaction_data-color-red">
+                    Rejected
+                  </td>
+                  <td>
+                    <img src="src/Transaction_eye.png" />
+                  </td>
+                  <td>
+                    <img src="src/download_img.png" />
+                  </td>
+                </tr>
+                <tr></tr>
+              </table>
+            </div>
+          </div>
+        </div> 
+      </div> 
+
+       <div id="summary-container">
+        <div class="summary-page">
+          <div class="summary-name">Summary</div>
+          <div class="summary-containers">
+            <div class="summary-container">
+              <div class="account-number-heading">Account Number</div>
+              <div class="account-number">67238744</div>
+            </div>
+            <div class="summary-container">
+              <div class="income-heading">Income</div>
+              <div class="income-number">$20,00,000</div>
+            </div>
+            <div class="summary-container">
+              <div class="spends-heading">Spends</div>
+              <div class="spends-number">$11,00,000</div>
+            </div>
+          </div>
+        </div>  -->
+      <!-- 
+        <div class="services-container">
+          <span class="services-headings">
+            <span class="services-heading">Services</span>
+            <span class="services-">Micro bank services for you</span>
+          </span>
+
+          <div class="current-services">
+            <span class="current-service-name">Current Services</span>
+
+            <div class="services-containers">
+              <div class="service-container">
+                <img class="create-account-img" src="src/create_account.png" />
+                <div class="current-account-heading">current Account</div>
+               
+              </div>
+              <div class="service-container">
+                <img class="payroll-img" src="src/payroll.png" />
+                <div class="current-account-heading">Payroll</div>
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                  <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+                </div>
+              </div>
+              <div class="service-container">
+                <img class="payment-img" src="src/payment.png" />
+                <div class="current-account-heading">Payment</div>
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                  <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="Available-services">
+            <span class="Available-service-name">Available Services</span>
+            <div class="Available-services-containers">
+              <div class="Available-service-container">
+                <img class="create-account-img" src="src/wallets.png" />
+                <div class="current-account-heading">Wallets</div>
+              </div>
+              <div class="service-container">
+                <img class="payroll-img" src="src/investments.png" />
+                <div class="current-account-heading">Investments</div>
+              </div>
+              <div class="service-container">
+                <img class="payment-img" src="src/tax_payments.png" />
+                <div class="current-account-heading">Tax Payments</div>
+              </div>
+              <div class="service-container">
+                <img class="payment-img" src="src/payment.png" />
+                <div class="current-account-heading">Loan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <footer class="footer">
+        <img src="src/footer_img.png" />
+      </footer> -->
+    </div>
+  </body>
+</html>

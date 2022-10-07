@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Bank-Figma</title>
+    <link rel="stylesheet" href="css/create-account-style.css" />
+    <link rel="stylesheet" href="css/registration_mobile.css" />
+    <link rel="stylesheet" href="css/registration_tablet.css" />
+    <link rel="shortcut icon" href="#" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <script src="create_account.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-page">
+        <img src="src/Group 7.png" class="Group-7" />
+        <img src="src/Team spirit-pana 1.png" class="spritit-pana" />
+        <img src="src/Micro Bank.png" class="Micro-bank" />
+        <img src="src/Union.png" class="union" />
+      </div>
+      <div class="login-page">
+        <form
+          method="post"
+          action="#"
+          class="login-form"
+          id="login-form"
+          onsubmit="return validation()"
+        >
+          <h2>Create an Account</h2>
+
+          <div class="fullname-div">
+            <label class="label-Email-phone" for="one">Full Name</label>
+            <input
+              class="input-Email"
+              type="text"
+              id="fullname"
+              autocomplete="off"
+            />
+            <span id="fullname-error1" class="fullname-error1"></span>
+          </div>
+
+          <div class="password-div">
+            <label class="label-password" for="one"
+              >Date of Incorporation</label
+            >
+            <input class="input-pass" type="date" id="dateofIncorporation" />
+            <span id="fullname-error2" class="fullname-error2"></span>
+          </div>
+
+          <div class="password-div">
+            <label class="label-password" for="one">Email</label>
+            <input
+              class="input-pass"
+              type="text"
+              id="email"
+              autocomplete="off"
+            />
+            <span id="fullname-error3" class="fullname-error3"></span>
+          </div>
+
+          <div class="password-div">
+            <label class="label-password" for="one">Password</label>
+            <input class="input-pass" type="password" id="password" />
+            <!-- <img
+              class="hide-show-pass-icon"
+              src="src/hide-show-pass-icon.png"
+            /> -->
+            <span id="fullname-error4" class="fullname-error4"></span>
+          </div>
+
+          <div class="password-div">
+            <label class="label-password" for="one">Confirm Password</label>
+            <input class="input-pass" type="password" id="conpassword" />
+            <!-- <img
+              class="hide-show-pass-icon"
+              src="src/hide-show-pass-icon.png"
+            /> -->
+            <span id="fullname-error5" class="fullname-error5"></span>
+          </div>
+
+          <input
+            class="login-btn"
+            type="submit"
+            value="Create an Account"
+            name="Create an Account"
+            id="createaccount"
+          />
+
+          <div class="dont-have-account">
+            Already have an account?
+            <a class="create-account" href="index.html">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

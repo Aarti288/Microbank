@@ -1,0 +1,269 @@
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  .login-page {
+    width: 683px;
+    position: absolute;
+    left: 31%;
+    right: 0%;
+    top: 117%;
+    bottom: 0%;
+  }
+  .login-page h2 {
+    color: black;
+    position: relative;
+    right: 36px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 51px;
+    line-height: 44px;
+  }
+  .login-page h4 {
+    color: gray;
+    position: relative;
+    right: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .login-btn {
+    background-color: #d90429;
+    border: none;
+    color: aliceblue;
+  }
+  .input-Email {
+    background-color: #e8e8e8;
+    border: none;
+    position: relative;
+    right: 87px;
+    width: 296px;
+    height: 50px;
+    border-radius: 12px;
+    top: 39px;
+  }
+  .input-pass {
+    background-color: #e8e8e8;
+    border: none;
+    position: relative;
+    right: 12px;
+
+    width: 296px;
+    height: 50px;
+    border-radius: 12px;
+    display: block;
+    top: 39px;
+  }
+  .fullname-div {
+    position: relative;
+    top: -14px;
+  }
+
+  .dont-have-account {
+    display: block;
+    color: #828282;
+    position: relative;
+    top: 223px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 19px;
+    font-size: 21px;
+    left: -50px;
+  }
+  .create-account {
+    color: #d90429;
+    display: inline-block;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .Group-7 {
+    position: relative;
+    width: 227px;
+    height: 227px;
+
+    top: 0px;
+
+    height: 227.00000000000085px;
+    width: 227.00000000000085px;
+
+    border-radius: 0px;
+  }
+  .image-page {
+    background-color: #d90429;
+    display: inline-flex;
+    position: absolute;
+    left: 0%;
+    right: 50%;
+    top: 0%;
+    bottom: 0%;
+
+    width: 843px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  .spritit-pana {
+    height: 430px;
+    width: 500px;
+    left: 91px;
+    top: 84px;
+    border-radius: 0px;
+    position: absolute;
+
+    left: 91px;
+    top: 28px;
+  }
+  .Micro-bank {
+    position: absolute;
+    width: 401px;
+    height: 80px;
+    left: 141px;
+    top: 450px;
+
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .login-form {
+    display: inline-block;
+    position: relative;
+  }
+  .label-Email-phone {
+    display: block;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 19px;
+    display: flex;
+    align-items: flex-end;
+    color: #1a1a1a;
+    position: relative;
+    left: -8px;
+    top: 12px;
+  }
+  .label-password {
+    display: block;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 19px;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #1a1a1a;
+    position: relative;
+    left: -8px;
+    top: 28px;
+  }
+
+  .login-btn {
+    display: block;
+    position: relative;
+
+    background: #d90429;
+    box-shadow: 0px 6px 28px 5px rgba(254, 45, 23, 0.3);
+    border-radius: 12px;
+    height: 50px;
+    width: 300px;
+    position: relative;
+    left: -10px;
+    top: 176px;
+  }
+
+  .forget-password {
+    color: #d90429;
+    position: relative;
+    top: 70px;
+    left: 180px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .email-div {
+    position: relative;
+    top: 20px;
+  }
+  .password-div {
+    position: relative;
+    top: 2px;
+  }
+  .Union {
+    position: absolute;
+    width: 137px;
+    height: 137px;
+    left: 522px;
+    top: 466px;
+
+    /* background: rgba(0, 0, 0, 0.3); */
+  }
+  .create-account:link {
+    text-decoration: none;
+  }
+  .hide-show-pass-icon {
+    position: relative;
+    top: -20px;
+    left: 109px;
+  }
+
+  #fullname-error1 {
+    color: red;
+    position: relative;
+    top: 46px;
+    left: -315px;
+  }
+  #fullname-error2 {
+    color: red;
+    position: relative;
+    top: 15px;
+    left: -91px;
+  }
+
+  #fullname-error3 {
+    color: red;
+    position: relative;
+    top: 16px;
+    left: -80px;
+  }
+
+  #fullname-error4 {
+    color: red;
+    top: 11px;
+    left: -69px;
+    position: relative;
+  }
+  #fullname-error5 {
+    color: red;
+    position: relative;
+    top: 11px;
+    left: -75px;
+  }
+}

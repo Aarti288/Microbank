@@ -1,10 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This README would normally document whatever steps are necessary to get your application up and runnin
 
 ### What is this repository for?
 
-- Quick summa
+- Quick summ
 - Version
 - [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 

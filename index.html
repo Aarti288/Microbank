@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Bank-Figma</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login_mobile.css" />
+    <link rel="stylesheet" href="css/tablet_login.css" />
+    <link rel="shortcut icon" href="#" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+    <script>
+      function preventBack() {
+        window.history.forward();
+      }
+
+      setTimeout("preventBack()", 0);
+
+      window.onunload = function () {
+        null;
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-page">
+        <img src="src/Group 7.png" class="Group-7" />
+        <img src="src/Team spirit-pana 1.png" class="spritit-pana" />
+        <img src="src/Micro Bank.png" class="Micro-bank" />
+        <img src="src/Union.png" class="union" />
+      </div>
+      <div class="login-page">
+        <form
+          action="#"
+          name="loginForm"
+          onSubmit="return form_valid();"
+          class="login-form"
+          id="login"
+        >
+          <h2>Login</h2>
+          <h4>Please login to your account</h4>
+
+          <div class="email-div">
+            <label class="label-Email-phone" for="one">Email or Phone</label>
+            <input
+              class="input-Email"
+              type="text"
+              id="login-email"
+              name="email"
+              required
+            />
+            <span
+              id="fullname-error1"
+              style="color: red"
+              class="fullname-error1"
+            ></span>
+          </div>
+          <div class="email-div">
+            <label class="label-password" for="one">Password</label>
+            <input
+              class="input-pass"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+            <span
+              id="fullname-error2"
+              style="color: red"
+              class="fullname-error2"
+            ></span>
+          </div>
+          <a href="#" class="forget-password">Forgot Password?</a>
+          <a
+            class="login-btn"
+            id="login-btn1"
+            type="submit"
+            form="form1"
+            value="Submit"
+            ><span id="login-btnn">Login</span>
+          </a>
+          <div class="dont-have-account">
+            Dont't have an account?
+            <a
+              class="create-account"
+              id="createaccountlink"
+              href="create-account.html"
+              >Create an Account</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

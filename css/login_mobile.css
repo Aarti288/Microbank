@@ -1,0 +1,326 @@
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .union {
+    left: 655px;
+
+    position: absolute;
+    top: 601px;
+  }
+  .login-page {
+    width: 752px;
+    position: absolute;
+    left: 8%;
+    right: 78%;
+    top: 117%;
+    bottom: 0%;
+  }
+  .login-page h2 {
+    color: black;
+    position: relative;
+    right: -240px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 93px;
+    line-height: 44px;
+  }
+  .login-page h4 {
+    color: gray;
+    position: relative;
+    right: -175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 37px;
+  }
+  .login-btn {
+    background-color: #d90429;
+    border: none;
+    color: aliceblue;
+    text-decoration: none;
+    top: 257px;
+  }
+  .input-Email {
+    background-color: #e8e8e8;
+    border: none;
+    position: relative;
+    right: -239px;
+
+    width: 296px;
+    height: 50px;
+    border-radius: 12px;
+    top: 56px;
+  }
+  .input-pass {
+    background-color: #e8e8e8;
+    border: none;
+    position: relative;
+    right: -240px;
+
+    width: 296px;
+    height: 50px;
+    border-radius: 12px;
+    display: block;
+    top: 96px;
+  }
+
+  .dont-have-account {
+    display: block;
+    color: #828282;
+    position: relative;
+    top: 301px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 19px;
+    font-size: 22px;
+    left: 228px;
+  }
+  .create-account {
+    color: #d90429;
+    display: inline-block;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .Group-7 {
+    position: relative;
+    width: 227px;
+    height: 227px;
+
+    top: 0px;
+
+    height: 227.00000000000085px;
+    width: 227.00000000000085px;
+
+    border-radius: 0px;
+  }
+  .image-page {
+    background-color: #d90429;
+    display: inline-flex;
+    position: absolute;
+    left: 0%;
+    right: 50%;
+    top: 0%;
+    bottom: 0%;
+
+    width: 833px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  .spritit-pana {
+    height: 553px;
+    width: 691px;
+    left: 91px;
+    top: 84px;
+    border-radius: 0px;
+    position: absolute;
+    left: 91px;
+    top: 28px;
+  }
+  .Micro-bank {
+    position: absolute;
+    width: 401px;
+    height: 80px;
+    left: 225px;
+    top: 564px;
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .login-form {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+  }
+  .label-Email-phone {
+    display: block;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 19px;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #1a1a1a;
+    position: relative;
+    left: 239px;
+    top: 32px;
+  }
+  .label-password {
+    display: block;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #1a1a1a;
+    position: relative;
+    left: 240px;
+    top: 78px;
+  }
+
+  .login-btn {
+    display: block;
+    position: relative;
+
+    background: #d90429;
+    box-shadow: 0px 6px 28px 5px rgba(254, 45, 23, 0.3);
+    border-radius: 12px;
+    height: 50px;
+    width: 300px;
+    position: relative;
+    left: 239px;
+    top: 248px;
+  }
+
+  .forget-password {
+    color: #d90429;
+    position: relative;
+    top: 150px;
+    left: 423px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .email-div {
+    position: relative;
+    top: 20px;
+  }
+
+  .password-div {
+    position: relative;
+    top: 48px;
+  }
+  .Union {
+    position: absolute;
+    width: 137px;
+    height: 137px;
+    left: 522px;
+    top: 466px;
+  }
+  .create-account:link {
+    text-decoration: none;
+  }
+  .hide-show-pass-icon {
+    position: relative;
+    top: -20px;
+    left: 109px;
+  }
+  .form-message {
+    color: red;
+  }
+  .form-input-error-message {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: red;
+  }
+  .form--hidden {
+    display: none;
+  }
+  .dashboard-microbank-icon {
+    position: absolute;
+    width: 151px;
+    height: 30px;
+    left: 20px;
+    top: 21px;
+
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #d90429;
+  }
+  .dashboard-ABC-PVT-icon {
+    position: absolute;
+    width: 153px;
+    height: 33px;
+    left: 236px;
+    top: 19px;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #1a1a1a;
+  }
+  .dashboard-notification-icon {
+    position: absolute;
+    left: 89.4%;
+    right: 8.4%;
+    top: 8.35%;
+    bottom: 8.4%;
+  }
+  .login-div-btn {
+    position: relative;
+    top: 15px;
+  }
+  .dashed {
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    left: 203px;
+    top: 16px;
+
+    background: #c4c4c4;
+  }
+  #fullname-error1 {
+    position: relative;
+    top: 48px;
+    right: 67px;
+  }
+
+  #fullname-error2 {
+    position: relative;
+    top: 37px;
+    right: -236px;
+  }
+  #login-btnn {
+    position: relative;
+    top: 15px;
+    left: 127px;
+  }
+}
