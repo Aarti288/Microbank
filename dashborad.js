@@ -1,12 +1,19 @@
+var fname = document.getElementById("login-email");
 var logoutbtn = document.getElementById("sub-menu-link1");
 var isLogin = localStorage.getItem("isLogin");
+// var transactions = [{}];
 if (isLogin === "0") {
     window.location.replace("../index.html");
 }
+var username = localStorage.getItem("fullname");
+console.log(username);
+var useremail = localStorage.getItem("email");
+console.log(useremail);
 logoutbtn.onclick = function () {
     var isLogin = localStorage.getItem("isLogin");
     localStorage.setItem("isLogin", "0");
     if (isLogin === "0") {
+        localStorage.removeItem("username");
         window.location.replace("../index.html");
     }
 };
@@ -22,7 +29,23 @@ function getnext() {
     x.style.display = "none";
     y.style.display = "flex";
 }
+var values = "".concat(username).split(" ");
+var f_name = values[0];
+var l_name = "".concat(username).substring("".concat(username).indexOf(" ") + 1);
+var profilecircle = document.getElementById("profile-circle");
+profilecircle.innerText =
+    "".concat(f_name).charAt(0).toUpperCase() + "".concat(l_name).charAt(0).toUpperCase();
 function togglemenu() {
+    var values = "".concat(username).split(" ");
+    var f_name = values[0];
+    var l_name = "".concat(username).substring("".concat(username).indexOf(" ") + 1);
+    var pname = document.getElementById("pname");
+    pname.innerText =
+        "".concat(f_name).charAt(0).toUpperCase() + "".concat(l_name).charAt(0).toUpperCase();
+    var fullname = document.getElementById("person-name1");
+    fullname.innerText = "".concat(username);
+    var email = document.getElementById("email-id");
+    email.innerText = "".concat(useremail);
     var z = document.getElementById("submenu");
     if (z.style.display === "none") {
         z.style.display = "block";
@@ -125,12 +148,66 @@ spends.addEventListener("click", function (e) {
         index.style.color = "black";
     }
 });
-// function checkOddColumns() {
-//   for (let i = 0; i < fa.length; i++) {
-//     if (fa[i].style.color == "fa fa-star") {
-//       fa[i].style.color = "green";
-//     } else {
-//       fa[i].style.color = "fa fa-star";
-//     }
-//   }
-// }
+var starrate = document.getElementById("rate");
+var span1 = document.createElement("span");
+var span2 = document.createElement("span");
+var span3 = document.createElement("span");
+var span4 = document.createElement("span");
+var span5 = document.createElement("span");
+span1.setAttribute("class", "fa fa-star");
+span2.setAttribute("class", "fa fa-star");
+span3.setAttribute("class", "fa fa-star");
+span4.setAttribute("class", "fa fa-star");
+span5.setAttribute("class", "fa fa-star");
+span1.setAttribute("id", "account1");
+span2.setAttribute("id", "account2");
+span3.setAttribute("id", "account3");
+span4.setAttribute("id", "account4");
+span5.setAttribute("id", "account5");
+starrate.appendChild(span1);
+starrate.appendChild(span2);
+starrate.appendChild(span3);
+starrate.appendChild(span4);
+starrate.appendChild(span5);
+var starincome = document.getElementById("income");
+var span1 = document.createElement("span");
+var span2 = document.createElement("span");
+var span3 = document.createElement("span");
+var span4 = document.createElement("span");
+var span5 = document.createElement("span");
+span1.setAttribute("class", "fa fa-star");
+span2.setAttribute("class", "fa fa-star");
+span3.setAttribute("class", "fa fa-star");
+span4.setAttribute("class", "fa fa-star");
+span5.setAttribute("class", "fa fa-star");
+span1.setAttribute("id", "income1");
+span2.setAttribute("id", "income2");
+span3.setAttribute("id", "income3");
+span4.setAttribute("id", "income4");
+span5.setAttribute("id", "income5");
+starincome.appendChild(span1);
+starincome.appendChild(span2);
+starincome.appendChild(span3);
+starincome.appendChild(span4);
+starincome.appendChild(span5);
+var starspend = document.getElementById("spendsss");
+var span1 = document.createElement("span");
+var span2 = document.createElement("span");
+var span3 = document.createElement("span");
+var span4 = document.createElement("span");
+var span5 = document.createElement("span");
+span1.setAttribute("class", "fa fa-star");
+span2.setAttribute("class", "fa fa-star");
+span3.setAttribute("class", "fa fa-star");
+span4.setAttribute("class", "fa fa-star");
+span5.setAttribute("class", "fa fa-star");
+span1.setAttribute("id", "spendsss1");
+span2.setAttribute("id", "spendsss2");
+span3.setAttribute("id", "spendsss3");
+span4.setAttribute("id", "spendsss4");
+span5.setAttribute("id", "spendsss5");
+starspend.appendChild(span1);
+starspend.appendChild(span2);
+starspend.appendChild(span3);
+starspend.appendChild(span4);
+starspend.appendChild(span5);

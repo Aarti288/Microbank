@@ -34,9 +34,15 @@ button.addEventListener("click", (e) => {
 
     if (users.email == fname.value) {
       localStorage.setItem("isLogin", "1");
+      localStorage.setItem("email", users.email);
+
+      localStorage.setItem("fullname", users.username);
+
       window.location.href = "dashboard.html";
     } else {
       alert("Invalid User");
     }
   })();
 });
+
+//https://javascript.plainenglish.io/implementing-login-case-using-localstorage-and-sessionstorage-bfddce5d2198#:~:text=var%20password%20%3D%20document.,(%E2%80%9Ccurrentloggedin%E2%80%9D%2Cusername)%3B

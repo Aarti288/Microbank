@@ -47,7 +47,7 @@
       <div class="header-right">
         <img class="bell-icon" src="src/notification.png" alt="" />
 
-        <a class="profile-circle"  href="javascript:togglemenu()" style="text-decoration: none;">AT</a>
+        <a id="profile-circle" class="profile-circle"  href="javascript:togglemenu()" style="text-decoration: none;">AT</a>
         <img
           class="dropdown-icon"
          
@@ -63,9 +63,9 @@
            
           
            
-           <div class="person-name"><span class="pname">AT</span></div>
-             <span class="person-name1">Aarti Tak</span>
-            <a class="email-id">aarti.tak@perennialsys.com</a>
+           <div class="person-name"><span id="pname" class="pname">AT</span></div>
+             <span id="person-name1" class="person-name1">Aarti Tak</span>
+            <a class="email-id" id="email-id">{{username.name}}</a>
 
             <a
               href="Edit_profile.html"
@@ -140,15 +140,6 @@
           <img src="src/create_account.png">
             <p class="no">Current Account</p>
              <div class="rate" id="rate" >
-                  <span class="fa fa-star-o" id="account1" ></span>
-                
-                  <span class="fa fa-star-o"id="account2" ></span>
-                 
-                  <span class="fa fa-star-o" id="account3" ></span>
-                 
-                  <span class="fa fa-star-o" id="account4"  ></span>
-                
-                  <span  class="fa fa-star-o" id="account5" ></span>
                 
                 </div>
           </div>
@@ -156,15 +147,7 @@
            <img src="src/payroll.png">
             <p class="no">Payrolls</p>
              <div class="rate">
-                   <span class="fa fa-star-o" id="income1"  ></span>
-                
-                  <span class="fa fa-star-o"id="income2" ></span>
-                 
-                  <span class="fa fa-star-o" id="income3" ></span>
-                 
-                  <span class="fa fa-star-o" id="income4" ></span>
-                
-                  <span  class="fa fa-star-o" id="income5"  ></span>
+                  
                
                 </div>
           </div>
@@ -172,15 +155,7 @@
             <img src="src/payment.png">
             <p class="no">Payments</p>
              <div class="rate">
-                   <span class="fa fa-star-o" id="spendsss1" name="rate" value="5" ></span>
-                
-                  <span class="fa fa-star-o"id="spendsss2" name="rate" value="4" ></span>
-                 
-                  <span class="fa fa-star-o" id="spendsss3" name="rate" value="3" ></span>
-                 
-                  <span class="fa fa-star-o" id="spendsss4" name="rate" value="2" ></span>
-                
-                  <span  class="fa fa-star-o" id="spendsss5" name="rate" value="1" ></span>
+                  
                  
                 </div>
           </div>
@@ -270,282 +245,7 @@
 </table>
             </div>
       
-      <!-- <div class="current-services">
-         <div class="currentservice-title">Current Services</div>
-         <div class="service">
-        <div class="current-account">
-          <img src="src/create_account.png">
-        </div>
-         <div class="Payrolls">
-          <img src="src/payroll.png">
-         </div>
-          <div class="Payment">
-            <img src="src/payment.png">
-          </div>
-          </div>
-      </div> -->
-      <!-- </div>
-      </div> -->
-
-      <!-- <div class="comtainer">
-      <nav class="navbar">
-        <img
-          class="dashboard-microbank-icon"
-          src="src/Micro Bank_dashboard.png"
-        />
-        <div class="vertical-bar"></div>
-        - <img class="dashed" src="src/dashed.png" /> -->
-      <!-- <img class="dashboard-ABC-PVT-icon" src="src/ABC Pvt. Ltd..png" />
-        <img class="dashboard-notification-icon" src="src/notification.png" />
-
-        <div class="sub-menu-wrap">
-          <div class="sub-menu">
-            <div class="user-info">
-              <div class="user-profile">
-                <img class="profile-circle" src="src/profile_cirlce.png" />
-                <div id="profile-person-name">
-                  <a class="person-name" href="javascript:togglemenu();">AT</a>
-                </div>
-                <div class="dropdown">
-                  <img src="src/drop_dwon.png" />
-                </div>
-              </div>
-            </div>
-          </div> -->
-      <!-- <div class="sub-menu-page" id="submenu">
-            <img class="profile-circle1" src="src/profile_cirlce.png" />
-            <span class="person-name1">Aarti Tak</span>
-            <a class="person-name2">AT</a>
-
-            <a class="email-id">aarti.tak@perennialsys.com</a>
-
-            <a
-              href="Edit_profile.html"
-              class="sub-menu-link"
-              id="sub-menu-link"
-            >
-              <p>Edit profile</p>
-            </a>
-            <div
-              class="border-profile"
-              style="border-top: 1px solid #e0e0e0"
-            ></div>
-
-            <a href="#" class="sub-menu-link" id="sub-menu-link">
-              <p>Settings</p>
-            </a>
-            <div
-              class="border-profile"
-              style="border-top: 1px solid #e0e0e0"
-            ></div>
-
-            <a class="sub-menu-link" id="sub-menu-link1">
-              <p id="logout-link">LogOut</p>
-            </a>
-            <div
-              class="border-profile"
-              style="border-top: 1px solid #e0e0e0"
-            ></div>
-          </div>
-        </div>
-      </nav>
-
-      <div class="dashboard-container">
-        <span class="dashboard-name">Dashboard</span>
-
-        <div class="summary-details">
-          <a
-            href="javascript:getPereviousPage()"
-            id="previousPage"
-            class="summary"
-            >Summary</a
-          >
-          <a href="javascript:getNextPage()" id="nextPage" class="details"
-            >Details</a
-          >
-            <! <div id="details-container">
-            <div class="details-page">
-              <table id="customers">
-                <tr>
-                  <th>Transaction ID</th>
-                  <th>Date</th>
-                  <th>Amount</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                <tr>
-                  <td class="transaction_data">2011002039111</td>
-                  <td class="transaction_data">22-09-2021</td>
-                  <td class="transaction_data">1,780</td>
-                  <td class="transaction_data transaction_data-color">
-                    Approved
-                  </td>
-                  <td>
-                    <img src="src/Transaction_eye.png" />
-                  </td>
-                  <td>
-                    <img src="src/download_img.png" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="transaction_data">2011002039111</td>
-                  <td class="transaction_data">22-09-2021</td>
-                  <td class="transaction_data">1,780</td>
-                  <td class="transaction_data transaction_data-color">
-                    Approved
-                  </td>
-                  <td>
-                    <img src="src/Transaction_eye.png" />
-                  </td>
-                  <td>
-                    <img src="src/download_img.png" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="transaction_data">2011002039111</td>
-                  <td class="transaction_data">22-09-2021</td>
-                  <td class="transaction_data">1,780</td>
-                  <td class="transaction_data transaction_data-color-red">
-                    Rejected
-                  </td>
-                  <td>
-                    <img src="src/Transaction_eye.png" />
-                  </td>
-                  <td>
-                    <img src="src/download_img.png" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="transaction_data">2011002039111</td>
-                  <td class="transaction_data">22-09-2021</td>
-                  <td class="transaction_data">1,780</td>
-                  <td class="transaction_data transaction_data-color">
-                    Approved
-                  </td>
-                  <td>
-                    <img src="src/Transaction_eye.png" />
-                  </td>
-                  <td>
-                    <img src="src/download_img.png" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="transaction_data">2011002039111</td>
-                  <td class="transaction_data">22-09-2021</td>
-                  <td class="transaction_data">1,780</td>
-                  <td class="transaction_data transaction_data-color-red">
-                    Rejected
-                  </td>
-                  <td>
-                    <img src="src/Transaction_eye.png" />
-                  </td>
-                  <td>
-                    <img src="src/download_img.png" />
-                  </td>
-                </tr>
-                <tr></tr>
-              </table>
-            </div>
-          </div>
-        </div> 
-      </div> 
-
-       <div id="summary-container">
-        <div class="summary-page">
-          <div class="summary-name">Summary</div>
-          <div class="summary-containers">
-            <div class="summary-container">
-              <div class="account-number-heading">Account Number</div>
-              <div class="account-number">67238744</div>
-            </div>
-            <div class="summary-container">
-              <div class="income-heading">Income</div>
-              <div class="income-number">$20,00,000</div>
-            </div>
-            <div class="summary-container">
-              <div class="spends-heading">Spends</div>
-              <div class="spends-number">$11,00,000</div>
-            </div>
-          </div>
-        </div>  -->
-      <!-- 
-        <div class="services-container">
-          <span class="services-headings">
-            <span class="services-heading">Services</span>
-            <span class="services-">Micro bank services for you</span>
-          </span>
-
-          <div class="current-services">
-            <span class="current-service-name">Current Services</span>
-
-            <div class="services-containers">
-              <div class="service-container">
-                <img class="create-account-img" src="src/create_account.png" />
-                <div class="current-account-heading">current Account</div>
-               
-              </div>
-              <div class="service-container">
-                <img class="payroll-img" src="src/payroll.png" />
-                <div class="current-account-heading">Payroll</div>
-                <div class="rate">
-                  <input type="radio" id="star5" name="rate" value="5" />
-                  <label for="star5" title="text">5 stars</label>
-                  <input type="radio" id="star4" name="rate" value="4" />
-                  <label for="star4" title="text">4 stars</label>
-                  <input type="radio" id="star3" name="rate" value="3" />
-                  <label for="star3" title="text">3 stars</label>
-                  <input type="radio" id="star2" name="rate" value="2" />
-                  <label for="star2" title="text">2 stars</label>
-                  <input type="radio" id="star1" name="rate" value="1" />
-                  <label for="star1" title="text">1 star</label>
-                </div>
-              </div>
-              <div class="service-container">
-                <img class="payment-img" src="src/payment.png" />
-                <div class="current-account-heading">Payment</div>
-                <div class="rate">
-                  <input type="radio" id="star5" name="rate" value="5" />
-                  <label for="star5" title="text">5 stars</label>
-                  <input type="radio" id="star4" name="rate" value="4" />
-                  <label for="star4" title="text">4 stars</label>
-                  <input type="radio" id="star3" name="rate" value="3" />
-                  <label for="star3" title="text">3 stars</label>
-                  <input type="radio" id="star2" name="rate" value="2" />
-                  <label for="star2" title="text">2 stars</label>
-                  <input type="radio" id="star1" name="rate" value="1" />
-                  <label for="star1" title="text">1 star</label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="Available-services">
-            <span class="Available-service-name">Available Services</span>
-            <div class="Available-services-containers">
-              <div class="Available-service-container">
-                <img class="create-account-img" src="src/wallets.png" />
-                <div class="current-account-heading">Wallets</div>
-              </div>
-              <div class="service-container">
-                <img class="payroll-img" src="src/investments.png" />
-                <div class="current-account-heading">Investments</div>
-              </div>
-              <div class="service-container">
-                <img class="payment-img" src="src/tax_payments.png" />
-                <div class="current-account-heading">Tax Payments</div>
-              </div>
-              <div class="service-container">
-                <img class="payment-img" src="src/payment.png" />
-                <div class="current-account-heading">Loan</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- <footer class="footer">
-        <img src="src/footer_img.png" />
-      </footer> -->
+      
     </div>
   </body>
 </html>

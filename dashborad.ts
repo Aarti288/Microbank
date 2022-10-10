@@ -1,12 +1,22 @@
+var fname = <HTMLInputElement>document.getElementById("login-email");
 var logoutbtn = document.getElementById("sub-menu-link1")! as HTMLInputElement;
 var isLogin = localStorage.getItem("isLogin");
+
+// var transactions = [{}];
 if (isLogin === "0") {
   window.location.replace("../index.html");
 }
+var username = localStorage.getItem("fullname");
+console.log(username);
+var useremail = localStorage.getItem("email");
+console.log(useremail);
+
 logoutbtn.onclick = function () {
   var isLogin = localStorage.getItem("isLogin");
+
   localStorage.setItem("isLogin", "0");
   if (isLogin === "0") {
+    localStorage.removeItem("username");
     window.location.replace("../index.html");
   }
 };
@@ -27,7 +37,33 @@ function getnext() {
   y.style.display = "flex";
 }
 
+var values = `${username}`.split(" ");
+
+var f_name = values[0];
+var l_name = `${username}`.substring(`${username}`.indexOf(" ") + 1);
+
+let profilecircle = document.getElementById(
+  "profile-circle"
+)! as HTMLInputElement;
+profilecircle.innerText =
+  `${f_name}`.charAt(0).toUpperCase() + `${l_name}`.charAt(0).toUpperCase();
+
 function togglemenu() {
+  var values = `${username}`.split(" ");
+
+  var f_name = values[0];
+  var l_name = `${username}`.substring(`${username}`.indexOf(" ") + 1);
+
+  let pname = document.getElementById("pname")! as HTMLInputElement;
+  pname.innerText =
+    `${f_name}`.charAt(0).toUpperCase() + `${l_name}`.charAt(0).toUpperCase();
+
+  let fullname = document.getElementById("person-name1")! as HTMLInputElement;
+  fullname.innerText = `${username}`;
+
+  let email = document.getElementById("email-id")! as HTMLInputElement;
+  email.innerText = `${useremail}`;
+
   var z = document.getElementById("submenu")! as HTMLInputElement;
   if (z.style.display === "none") {
     z.style.display = "block";
@@ -145,12 +181,77 @@ spends.addEventListener("click", (e) => {
   }
 });
 
-// function checkOddColumns() {
-//   for (let i = 0; i < fa.length; i++) {
-//     if (fa[i].style.color == "fa fa-star") {
-//       fa[i].style.color = "green";
-//     } else {
-//       fa[i].style.color = "fa fa-star";
-//     }
-//   }
-// }
+let starrate = document.getElementById("rate")! as HTMLInputElement;
+let span1 = document.createElement("span")! as HTMLInputElement;
+let span2 = document.createElement("span")! as HTMLInputElement;
+let span3 = document.createElement("span")! as HTMLInputElement;
+let span4 = document.createElement("span")! as HTMLInputElement;
+let span5 = document.createElement("span")! as HTMLInputElement;
+
+span1.setAttribute("class", "fa fa-star");
+span2.setAttribute("class", "fa fa-star");
+span3.setAttribute("class", "fa fa-star");
+span4.setAttribute("class", "fa fa-star");
+span5.setAttribute("class", "fa fa-star");
+
+span1.setAttribute("id", "account1");
+span2.setAttribute("id", "account2");
+span3.setAttribute("id", "account3");
+span4.setAttribute("id", "account4");
+span5.setAttribute("id", "account5");
+
+starrate.appendChild(span1);
+starrate.appendChild(span2);
+starrate.appendChild(span3);
+starrate.appendChild(span4);
+starrate.appendChild(span5);
+
+let starincome = document.getElementById("income")! as HTMLInputElement;
+let span1 = document.createElement("span")! as HTMLInputElement;
+let span2 = document.createElement("span")! as HTMLInputElement;
+let span3 = document.createElement("span")! as HTMLInputElement;
+let span4 = document.createElement("span")! as HTMLInputElement;
+let span5 = document.createElement("span")! as HTMLInputElement;
+
+span1.setAttribute("class", "fa fa-star");
+span2.setAttribute("class", "fa fa-star");
+span3.setAttribute("class", "fa fa-star");
+span4.setAttribute("class", "fa fa-star");
+span5.setAttribute("class", "fa fa-star");
+
+span1.setAttribute("id", "income1");
+span2.setAttribute("id", "income2");
+span3.setAttribute("id", "income3");
+span4.setAttribute("id", "income4");
+span5.setAttribute("id", "income5");
+
+starincome.appendChild(span1);
+starincome.appendChild(span2);
+starincome.appendChild(span3);
+starincome.appendChild(span4);
+starincome.appendChild(span5);
+
+let starspend = document.getElementById("spendsss")! as HTMLInputElement;
+let span1 = document.createElement("span")! as HTMLInputElement;
+let span2 = document.createElement("span")! as HTMLInputElement;
+let span3 = document.createElement("span")! as HTMLInputElement;
+let span4 = document.createElement("span")! as HTMLInputElement;
+let span5 = document.createElement("span")! as HTMLInputElement;
+
+span1.setAttribute("class", "fa fa-star");
+span2.setAttribute("class", "fa fa-star");
+span3.setAttribute("class", "fa fa-star");
+span4.setAttribute("class", "fa fa-star");
+span5.setAttribute("class", "fa fa-star");
+
+span1.setAttribute("id", "spendsss1");
+span2.setAttribute("id", "spendsss2");
+span3.setAttribute("id", "spendsss3");
+span4.setAttribute("id", "spendsss4");
+span5.setAttribute("id", "spendsss5");
+
+starspend.appendChild(span1);
+starspend.appendChild(span2);
+starspend.appendChild(span3);
+starspend.appendChild(span4);
+starspend.appendChild(span5);
