@@ -5,7 +5,6 @@ body {
 }
 .union {
   left: 530px;
-  /* top: 615px; */
   position: absolute;
   top: 450px;
 }
@@ -27,20 +26,24 @@ body {
   font-size: 32px;
   line-height: 44px;
 }
+.password-container {
+  margin-top: 51px;
+}
 .login-page h4 {
   color: gray;
-  position: relative;
-  right: -175px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-right: 12px;
 }
 .login-btn {
   background-color: #d90429;
   border: none;
   color: aliceblue;
   text-decoration: none;
+  cursor: pointer;
 }
 .input-Email {
   background-color: #e8e8e8;
@@ -141,11 +144,7 @@ body {
 
   color: #ffffff;
 }
-.login-form {
-  display: inline-block;
-  position: relative;
-  top: 20px;
-}
+
 .label-Email-phone {
   display: block;
 
@@ -309,7 +308,7 @@ body {
 }
 #fullname-error1 {
   position: relative;
-  top: 48px;
+  top: 55px;
   right: 67px;
 }
 
@@ -322,4 +321,12 @@ body {
   position: relative;
   top: 15px;
   left: 127px;
+}
+#togglePassword {
+  cursor: pointer;
+  margin-left: 543px;
+
+  position: absolute;
+  left: -32px;
+  margin-top: 1px;
 }

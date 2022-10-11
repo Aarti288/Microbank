@@ -15,7 +15,15 @@ button.addEventListener("click", (e) => {
     (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
       " ";
   }
+  let validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+  if (fname.value.match(validRegex)) {
+    return true;
+  } else {
+    (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
+      "*please check email address";
+  }
   if (password.value == "") {
     (<HTMLInputElement>document.getElementById("fullname-error2")).innerHTML =
       "*please fill the password field";
@@ -43,6 +51,19 @@ button.addEventListener("click", (e) => {
       alert("Invalid User");
     }
   })();
+});
+
+const togglePassword = document.querySelector(
+  "#togglePassword"
+)! as HTMLInputElement;
+const inputpassword = document.querySelector("#password")! as HTMLInputElement;
+
+togglePassword.addEventListener("click", function (e) {
+  const type =
+    inputpassword.getAttribute("type") === "password" ? "text" : "password";
+  inputpassword.setAttribute("type", type);
+
+  this.classList.toggle("fa-eye-slash");
 });
 
 //https://javascript.plainenglish.io/implementing-login-case-using-localstorage-and-sessionstorage-bfddce5d2198#:~:text=var%20password%20%3D%20document.,(%E2%80%9Ccurrentloggedin%E2%80%9D%2Cusername)%3B

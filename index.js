@@ -50,6 +50,14 @@ button.addEventListener("click", function (e) {
         document.getElementById("fullname-error1").innerHTML =
             " ";
     }
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (fname.value.match(validRegex)) {
+        return true;
+    }
+    else {
+        document.getElementById("fullname-error1").innerHTML =
+            "*please check email address";
+    }
     if (password.value == "") {
         document.getElementById("fullname-error2").innerHTML =
             "*please fill the password field";
@@ -81,5 +89,12 @@ button.addEventListener("click", function (e) {
             }
         });
     }); })();
+});
+var togglePassword = document.querySelector("#togglePassword");
+var inputpassword = document.querySelector("#password");
+togglePassword.addEventListener("click", function (e) {
+    var type = inputpassword.getAttribute("type") === "password" ? "text" : "password";
+    inputpassword.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
 });
 //https://javascript.plainenglish.io/implementing-login-case-using-localstorage-and-sessionstorage-bfddce5d2198#:~:text=var%20password%20%3D%20document.,(%E2%80%9Ccurrentloggedin%E2%80%9D%2Cusername)%3B
