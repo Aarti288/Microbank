@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>micro bank-figma</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+   
     <link rel="stylesheet" href="css/dashboard_style.css" />
     <link rel="stylesheet" href="css/dashboard_mobile.css" />
     <link rel="shortcut icon" href="#" />
 
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <!-- <link rel="stylesheet" href="css/tablet_dashboard.css" /> -->
+   
 
     <link
       href="https://fonts.googleapis.com/css?family=Open Sans"
       rel="stylesheet"
     />
     <script src="dashborad.js " defer></script>
+       <script src="transaction.js" defer></script>
 
     <script>
       function preventBack() {
@@ -50,7 +51,7 @@
         <a id="profile-circle" class="profile-circle"  href="javascript:togglemenu()" style="text-decoration: none;">AT</a>
         <img
           class="dropdown-icon"
-         
+         onclick="javascript:togglemenu()"
           src="src/drop_dwon.png"
           alt=""
         />
@@ -73,7 +74,7 @@
               id="sub-menu-link"
               style="text-decoration: none;" 
             >
-              <p  id="edit-profile-link">Edit profile</p>
+              <p  id="edit-profile-link" class="edit-profile">Edit profile</p>
             </a>
             <div
               class="border-profile"
@@ -81,7 +82,7 @@
             ></div>
 
             <a style="text-decoration: none;"  href="#" class="sub-menu-link" id="sub-menu-link">
-              <p id="setting-link">Settings</p>
+              <p id="setting-link" class="setting-profile">Settings</p>
             </a>
             <div
               class="border-profile"
@@ -89,7 +90,7 @@
             ></div>
 
             <a class="sub-menu-link" id="sub-menu-link1">
-              <p id="logout-link">LogOut</p>
+              <p id="logout-link" class="logout-profile">LogOut</p>
             </a>
             <div
               class="border-profile"
@@ -103,6 +104,7 @@
         
       
         <div class="navigation-bar">
+        
           <a id="previousPage"
           class="summary" href="javascript:getprevious();" >Summary</a>
        <a id="nextPage" class="summary" href="javascript:getnext();" >Details</a>
@@ -192,57 +194,7 @@
       
 
        <div id="details-container">
-        <table id="customers">
-  <tr>
-    <th>Transaction Id</th>
-    <th>Date</th>
-    <th>Amount</th>
-    <th>Status</th>
-    <th>Action</th>
-  </tr>
-  <tr>
-    <td>2011002039111</td>
-    <td>22-09-2021</td>
-    <td>1,780</td>
-     <td style="color:green">Approved</td>
-       <td><img src="src/Transaction_eye.png">
-      <img class="download-icon"src="src/download_img.png"></td>
-  </tr>
-  <tr>
-    <td>2011002039111</td>
-    <td>22-09-2021</td>
-    <td>1,780</td>
-     <td style="color:green">Approved</td>
-      <td><img src="src/Transaction_eye.png">
-      <img class="download-icon" src="src/download_img.png"></td>
-  </tr>
-  <tr>
-    <td>2011002039111</td>
-    <td>22-09-2021</td>
-    <td>1,780</td>
-     <td style="color:red">Rejected</td>
-      <td><img src="src/Transaction_eye.png">
-      <img class="download-icon" src="src/download_img.png"></td>
-  </tr>
-  <tr>
-    <td>2011002039111</td>
-    <td>22-09-2021</td>
-    <td>1,780</td>
-     <td style="color:green">Approved</td>
-      <td><img src="src/Transaction_eye.png">
-      <img class="download-icon" src="src/download_img.png"></td>
-  </tr>
-  <tr>
-    <td>2011002039111</td>
-    <td>22-09-2021</td>
-    <td>1,780</td>
-     <td style="color:red">Rejected</td>
-      <td><img src="src/Transaction_eye.png">
-      <img class="download-icon" src="src/download_img.png"></td>
-  </tr>
-  
-   
-</table>
+        
             </div>
       
       

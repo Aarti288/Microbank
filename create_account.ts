@@ -1,9 +1,25 @@
+class Registration {
+  uname: string;
+  email: string;
+  password: string;
+
+  constructor(uname: string, email: string, password: string) {
+    this.uname = (
+      document.getElementById("fullname")! as HTMLInputElement
+    ).value;
+    this.email = (document.getElementById("email")! as HTMLInputElement).value;
+    this.password = (
+      document.getElementById("password")! as HTMLInputElement
+    ).value;
+  }
+}
+
 (<HTMLInputElement>document.getElementById("createaccount")).addEventListener(
   "click",
   makerequest
 );
-var fname = document.getElementById("fullname")! as HTMLInputElement;
-console.log(fname);
+var uname = document.getElementById("fullname")! as HTMLInputElement;
+console.log(uname);
 var email = document.getElementById("email")! as HTMLInputElement;
 var date = document.getElementById("dateofIncorporation")! as HTMLInputElement;
 var password = document.getElementById("password")! as HTMLInputElement;
@@ -12,7 +28,7 @@ var conpassword = document.getElementById("conpassword")! as HTMLInputElement;
 function makerequest(e: any) {
   e.preventDefault();
 
-  if (fname.value == "") {
+  if (uname.value == "") {
     (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
       "**please fill the fullname field";
     return false;
@@ -20,7 +36,7 @@ function makerequest(e: any) {
     (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
       " ";
   }
-  if (fname.value.length <= 2 || fname.value.length > 20) {
+  if (uname.value.length <= 2 || uname.value.length > 20) {
     (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
       "**user length must be between 2 and 20";
     return false;
@@ -83,14 +99,14 @@ function makerequest(e: any) {
   }
 
   const data = {
-    username: fname.value,
+    username: uname.value,
     email: email.value,
     password: password.value,
   };
 
   console.log(data);
 
-  fetch("https://microbankv2.getsandbox.com/users", {
+  fetch("https://microbankv3.getsandbox.com/users", {
     method: "POST",
 
     headers: {

@@ -1,8 +1,24 @@
+@font-face {
+  font-family: "helvetica";
+  src: url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf")
+      format("woff"),
+    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf")
+      format("opentype"),
+    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf")
+      format("truetype");
+}
 body {
   margin: 0;
   padding: 0;
   background-color: #e5e5e5;
   overflow-x: hidden;
+}
+#previousPage {
+  border-top: solid 5px #d90429;
+}
+
+.spend {
+  margin-top: 22px;
 }
 .container {
   height: 72px;
@@ -149,8 +165,6 @@ body {
   line-height: 12px;
   letter-spacing: 0.15px;
 
-  /* text / disabled */
-
   color: rgba(0, 0, 0, 0.38);
 }
 .no {
@@ -193,7 +207,6 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
-  /* identical to box height */
 
   display: flex;
   align-items: flex-end;
@@ -378,4 +391,46 @@ body {
 }
 .sub-menu-link {
   cursor: pointer;
+}
+.edit-profile {
+  margin-left: 24px;
+  font-family: "Helvetica";
+}
+.setting-profile {
+  margin-left: 24px;
+  font-family: "Helvetica";
+}
+.logout-profile {
+  margin-left: 24px;
+  font-family: "Helvetica";
+}
+.person-name1 {
+  margin-left: 24px;
+  font-family: "Helvetica";
+}
+.email-id {
+  margin-left: 24px;
+  font-family: "Helvetica";
+}
+table.gridtable {
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  color: #333333;
+  border-width: 1px;
+  border-color: #666666;
+  border-collapse: collapse;
+}
+table.gridtable th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #dedede;
+}
+table.gridtable td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
 }

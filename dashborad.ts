@@ -2,7 +2,6 @@ var fname = <HTMLInputElement>document.getElementById("login-email");
 var logoutbtn = document.getElementById("sub-menu-link1")! as HTMLInputElement;
 var isLogin = localStorage.getItem("isLogin");
 
-// var transactions = [{}];
 if (isLogin === "0") {
   window.location.replace("../index.html");
 }
@@ -26,7 +25,9 @@ function getprevious() {
   let y = document.getElementById("details-container")! as HTMLInputElement;
 
   y.style.display = "none";
+
   x.style.display = "flex";
+  x.style.borderTop = "#0000FF";
 }
 
 function getnext() {
@@ -71,8 +72,7 @@ function togglemenu() {
     z.style.display = "none";
   }
 }
-
-fetch("https://microbankv2.getsandbox.com/services/1A", {
+fetch("https://microbankv3.getsandbox.com/services", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -114,6 +114,35 @@ fetch("https://microbankv2.getsandbox.com/services/1A", {
 var rate = document.getElementById("rate")!;
 rate.addEventListener("click", (e) => {
   let id = e.target.id.slice(7, 8);
+  const data = {
+    "userid": "1A",
+    "categoryID": "C1",
+    "categoryName": "Current Account",
+    "starRating": id,
+  
+  };
+
+  console.log(data);
+
+  fetch("https://microbankv3.getsandbox.com/service", {
+    method: "PUT",
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+
+    .then((data) => {
+      console.log("Success:", data);
+    })
+
+    .catch((error: any) => {
+      console.error("Error:", error);
+    });
+
   for (let j = 1; j <= 6; j++) {
     for (let i = 1; i <= id; i++) {
       let index1 = document.getElementById(`account${i}`)! as HTMLInputElement;
@@ -138,6 +167,34 @@ income.addEventListener("click", (e) => {
   let id1 = e.target.id.slice(6, 7);
   console.log(id1);
 
+  const data = {
+    "categoryID": "C2",
+        "categoryName": "Payroll",
+        "userid": "1A",
+          "starRating": id1,
+  };
+
+  console.log(data);
+
+  fetch("https://microbankv3.getsandbox.com/service", {
+    method: "PUT",
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+
+    .then((data) => {
+      console.log("Success:", data);
+    })
+
+    .catch((error: any) => {
+      console.error("Error:", error);
+    });
+
   for (let j = 1; j <= 6; j++) {
     for (let i = 1; i <= id1; i++) {
       let index1 = document.getElementById(`income${i}`)! as HTMLInputElement;
@@ -160,7 +217,36 @@ income.addEventListener("click", (e) => {
 var spends = document.getElementById("spendsss")!;
 spends.addEventListener("click", (e) => {
   let id2 = e.target.id.slice(8, 9);
-  console.log(id2);
+
+  const data = {
+       "categoryID": "C3",
+        "categoryName": "Payment",
+        "userid": "1A",
+         "starRating": id2
+    },
+
+  console.log(data);
+
+  fetch("https://microbankv3.getsandbox.com/service", {
+    method: "PUT",
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+
+    .then((data) => {
+      console.log("Success:", data);
+    })
+
+    .catch((error: any) => {
+      console.error("Error:", error);
+    });
+
+
 
   for (let j = 1; j <= 6; j++) {
     for (let i = 1; i <= id2; i++) {
@@ -182,7 +268,7 @@ spends.addEventListener("click", (e) => {
 });
 
 let starrate = document.getElementById("rate")! as HTMLInputElement;
-let span1 = document.createElement("span")! as HTMLInputElement;
+ let span1 = document.createElement("span")! as HTMLInputElement;
 let span2 = document.createElement("span")! as HTMLInputElement;
 let span3 = document.createElement("span")! as HTMLInputElement;
 let span4 = document.createElement("span")! as HTMLInputElement;
@@ -255,3 +341,6 @@ starspend.appendChild(span2);
 starspend.appendChild(span3);
 starspend.appendChild(span4);
 starspend.appendChild(span5);
+
+
+

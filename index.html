@@ -18,6 +18,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
     <script src="index.js" defer></script>
+    <script src="transaction.js" defer></script>
+
     <script>
       function preventBack() {
         window.history.forward();
@@ -71,6 +73,7 @@
               type="password"
               id="password"
               name="password"
+              onfocusout="myFunction()"
               required
             />
             <i class="far fa-eye" id="togglePassword"></i>
@@ -102,4 +105,5 @@
       </div>
     </div>
   </body>
+  <script></script>
 </html>

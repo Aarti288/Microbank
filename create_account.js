@@ -1,13 +1,21 @@
+var Registration = /** @class */ (function () {
+    function Registration(uname, email, password) {
+        this.uname = document.getElementById("fullname").value;
+        this.email = document.getElementById("email").value;
+        this.password = document.getElementById("password").value;
+    }
+    return Registration;
+}());
 document.getElementById("createaccount").addEventListener("click", makerequest);
-var fname = document.getElementById("fullname");
-console.log(fname);
+var uname = document.getElementById("fullname");
+console.log(uname);
 var email = document.getElementById("email");
 var date = document.getElementById("dateofIncorporation");
 var password = document.getElementById("password");
 var conpassword = document.getElementById("conpassword");
 function makerequest(e) {
     e.preventDefault();
-    if (fname.value == "") {
+    if (uname.value == "") {
         document.getElementById("fullname-error1").innerHTML =
             "**please fill the fullname field";
         return false;
@@ -16,7 +24,7 @@ function makerequest(e) {
         document.getElementById("fullname-error1").innerHTML =
             " ";
     }
-    if (fname.value.length <= 2 || fname.value.length > 20) {
+    if (uname.value.length <= 2 || uname.value.length > 20) {
         document.getElementById("fullname-error1").innerHTML =
             "**user length must be between 2 and 20";
         return false;
@@ -80,12 +88,12 @@ function makerequest(e) {
             " ";
     }
     var data = {
-        username: fname.value,
+        username: uname.value,
         email: email.value,
         password: password.value
     };
     console.log(data);
-    fetch("https://microbankv2.getsandbox.com/users", {
+    fetch("https://microbankv3.getsandbox.com/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

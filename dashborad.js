@@ -1,7 +1,6 @@
 var fname = document.getElementById("login-email");
 var logoutbtn = document.getElementById("sub-menu-link1");
 var isLogin = localStorage.getItem("isLogin");
-// var transactions = [{}];
 if (isLogin === "0") {
     window.location.replace("../index.html");
 }
@@ -22,6 +21,7 @@ function getprevious() {
     var y = document.getElementById("details-container");
     y.style.display = "none";
     x.style.display = "flex";
+    x.style.borderTop = "#0000FF";
 }
 function getnext() {
     var x = document.getElementById("summary-page");
@@ -54,7 +54,7 @@ function togglemenu() {
         z.style.display = "none";
     }
 }
-fetch("https://microbankv2.getsandbox.com/services/1A", {
+fetch("https://microbankv3.getsandbox.com/services", {
     method: "GET",
     headers: {
         "Content-Type": "application/json"
@@ -89,6 +89,26 @@ fetch("https://microbankv2.getsandbox.com/services/1A", {
 var rate = document.getElementById("rate");
 rate.addEventListener("click", function (e) {
     var id = e.target.id.slice(7, 8);
+    var data = {
+        "userid": "1A",
+        "categoryID": "C1",
+        "categoryName": "Current Account",
+        "starRating": id
+    };
+    console.log(data);
+    fetch("https://microbankv3.getsandbox.com/service", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+        .then(function (response) { return response.json(); })
+        .then(function (data) {
+        console.log("Success:", data);
+    })["catch"](function (error) {
+        console.error("Error:", error);
+    });
     for (var j = 1; j <= 6; j++) {
         for (var i = 1; i <= id; i++) {
             var index1 = document.getElementById("account".concat(i));
@@ -110,6 +130,26 @@ var income = document.getElementById("income");
 income.addEventListener("click", function (e) {
     var id1 = e.target.id.slice(6, 7);
     console.log(id1);
+    var data = {
+        "categoryID": "C2",
+        "categoryName": "Payroll",
+        "userid": "1A",
+        "starRating": id1
+    };
+    console.log(data);
+    fetch("https://microbankv3.getsandbox.com/service", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+        .then(function (response) { return response.json(); })
+        .then(function (data) {
+        console.log("Success:", data);
+    })["catch"](function (error) {
+        console.error("Error:", error);
+    });
     for (var j = 1; j <= 6; j++) {
         for (var i = 1; i <= id1; i++) {
             var index1 = document.getElementById("income".concat(i));
@@ -130,7 +170,26 @@ income.addEventListener("click", function (e) {
 var spends = document.getElementById("spendsss");
 spends.addEventListener("click", function (e) {
     var id2 = e.target.id.slice(8, 9);
-    console.log(id2);
+    var data = {
+        "categoryID": "C3",
+        "categoryName": "Payment",
+        "userid": "1A",
+        "starRating": id2
+    }, console, log;
+    (data);
+    fetch("https://microbankv3.getsandbox.com/service", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+        .then(function (response) { return response.json(); })
+        .then(function (data) {
+        console.log("Success:", data);
+    })["catch"](function (error) {
+        console.error("Error:", error);
+    });
     for (var j = 1; j <= 6; j++) {
         for (var i = 1; i <= id2; i++) {
             var index1 = document.getElementById("spendsss".concat(i));

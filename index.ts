@@ -1,9 +1,17 @@
-var fname = <HTMLInputElement>document.getElementById("login-email");
-var password = document.getElementById("password")! as HTMLInputElement;
 
-var button = document.getElementById("login-btn1")!;
-console.log(button);
+class login {
+  public fname: string = (
+    document.getElementById("login-email")! as HTMLInputElement
+  ).value;
+  private password: string = (
+    document.getElementById("password")! as HTMLInputElement
+  ).value;
+  
 
+ 
+
+
+buttonclick(): void | boolean {
 button.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -15,15 +23,7 @@ button.addEventListener("click", (e) => {
     (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
       " ";
   }
-  let validRegex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  if (fname.value.match(validRegex)) {
-    return true;
-  } else {
-    (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
-      "*please check email address";
-  }
   if (password.value == "") {
     (<HTMLInputElement>document.getElementById("fullname-error2")).innerHTML =
       "*please fill the password field";
@@ -35,7 +35,7 @@ button.addEventListener("click", (e) => {
   console.log(password.value);
   (async () => {
     var users = await fetch(
-      `https://microbankv2.getsandbox.com/users/${fname.value}/${password.value}`
+      `https://microbankv3.getsandbox.com/users/${fname.value}/${password.value}`
     ).then((response) => response.json());
 
     console.log(users.email);
@@ -66,4 +66,50 @@ togglePassword.addEventListener("click", function (e) {
   this.classList.toggle("fa-eye-slash");
 });
 
-//https://javascript.plainenglish.io/implementing-login-case-using-localstorage-and-sessionstorage-bfddce5d2198#:~:text=var%20password%20%3D%20document.,(%E2%80%9Ccurrentloggedin%E2%80%9D%2Cusername)%3B
+function myFunction() {
+ let fname= (
+    document.getElementById("login-email")! as HTMLInputElement
+  ).value;
+ (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
+      "*please fill the email field";
+    return false;
+}
+}
+
+var fname= document.getElementById("login-email")! as HTMLInputElement;
+const password1 = document.getElementById("password")! as HTMLInputElement;
+var button = document.getElementById("login-btn1")!;
+
+const obj = new login();
+obj.buttonclick();
+
+
+
+let fname1 = document.getElementById("login-email")! as HTMLInputElement;
+var x = document.getElementById("login")! as HTMLInputElement;
+x.addEventListener("focus", myFocusFunction, true);
+
+function myFocusFunction() {
+  if (fname1.value == "") {
+    (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
+      "*please fill the email field";
+    return false;
+  }
+  else{
+    (<HTMLInputElement>document.getElementById("fullname-error1")).innerHTML =
+      " ";
+  }
+
+
+   if (password.value == "") {
+    (<HTMLInputElement>document.getElementById("fullname-error2")).innerHTML =
+      "*please fill the password field";
+    return false;
+  } else {
+    (<HTMLInputElement>document.getElementById("fullname-error2")).innerHTML =
+      " ";
+  }
+}
+
+
+

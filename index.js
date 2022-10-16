@@ -34,14 +34,82 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
+var login = /** @class */ (function () {
+    function login() {
+        this.fname = document.getElementById("login-email").value;
+        this.password = document.getElementById("password").value;
+    }
+    login.prototype.buttonclick = function () {
+        var _this = this;
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (fname.value == "") {
+                document.getElementById("fullname-error1").innerHTML =
+                    "*please fill the email field";
+                return false;
+            }
+            else {
+                document.getElementById("fullname-error1").innerHTML =
+                    " ";
+            }
+            if (password.value == "") {
+                document.getElementById("fullname-error2").innerHTML =
+                    "*please fill the password field";
+                return false;
+            }
+            else {
+                document.getElementById("fullname-error2").innerHTML =
+                    " ";
+            }
+            console.log(password.value);
+            (function () { return __awaiter(_this, void 0, void 0, function () {
+                var users;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, fetch("https://microbankv3.getsandbox.com/users/".concat(fname.value, "/").concat(password.value)).then(function (response) { return response.json(); })];
+                        case 1:
+                            users = _a.sent();
+                            console.log(users.email);
+                            if (users.email == fname.value) {
+                                localStorage.setItem("isLogin", "1");
+                                localStorage.setItem("email", users.email);
+                                localStorage.setItem("fullname", users.username);
+                                window.location.href = "dashboard.html";
+                            }
+                            else {
+                                alert("Invalid User");
+                            }
+                            return [2 /*return*/];
+                    }
+                });
+            }); })();
+        });
+        var togglePassword = document.querySelector("#togglePassword");
+        var inputpassword = document.querySelector("#password");
+        togglePassword.addEventListener("click", function (e) {
+            var type = inputpassword.getAttribute("type") === "password" ? "text" : "password";
+            inputpassword.setAttribute("type", type);
+            this.classList.toggle("fa-eye-slash");
+        });
+        function myFunction() {
+            var fname = document.getElementById("login-email").value;
+            document.getElementById("fullname-error1").innerHTML =
+                "*please fill the email field";
+            return false;
+        }
+    };
+    return login;
+}());
 var fname = document.getElementById("login-email");
-var password = document.getElementById("password");
+var password1 = document.getElementById("password");
 var button = document.getElementById("login-btn1");
-console.log(button);
-button.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (fname.value == "") {
+var obj = new login();
+obj.buttonclick();
+var fname1 = document.getElementById("login-email");
+var x = document.getElementById("login");
+x.addEventListener("focus", myFocusFunction, true);
+function myFocusFunction() {
+    if (fname1.value == "") {
         document.getElementById("fullname-error1").innerHTML =
             "*please fill the email field";
         return false;
@@ -49,14 +117,6 @@ button.addEventListener("click", function (e) {
     else {
         document.getElementById("fullname-error1").innerHTML =
             " ";
-    }
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (fname.value.match(validRegex)) {
-        return true;
-    }
-    else {
-        document.getElementById("fullname-error1").innerHTML =
-            "*please check email address";
     }
     if (password.value == "") {
         document.getElementById("fullname-error2").innerHTML =
@@ -67,34 +127,4 @@ button.addEventListener("click", function (e) {
         document.getElementById("fullname-error2").innerHTML =
             " ";
     }
-    console.log(password.value);
-    (function () { return __awaiter(_this, void 0, void 0, function () {
-        var users;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("https://microbankv2.getsandbox.com/users/".concat(fname.value, "/").concat(password.value)).then(function (response) { return response.json(); })];
-                case 1:
-                    users = _a.sent();
-                    console.log(users.email);
-                    if (users.email == fname.value) {
-                        localStorage.setItem("isLogin", "1");
-                        localStorage.setItem("email", users.email);
-                        localStorage.setItem("fullname", users.username);
-                        window.location.href = "dashboard.html";
-                    }
-                    else {
-                        alert("Invalid User");
-                    }
-                    return [2 /*return*/];
-            }
-        });
-    }); })();
-});
-var togglePassword = document.querySelector("#togglePassword");
-var inputpassword = document.querySelector("#password");
-togglePassword.addEventListener("click", function (e) {
-    var type = inputpassword.getAttribute("type") === "password" ? "text" : "password";
-    inputpassword.setAttribute("type", type);
-    this.classList.toggle("fa-eye-slash");
-});
-//https://javascript.plainenglish.io/implementing-login-case-using-localstorage-and-sessionstorage-bfddce5d2198#:~:text=var%20password%20%3D%20document.,(%E2%80%9Ccurrentloggedin%E2%80%9D%2Cusername)%3B
+}
